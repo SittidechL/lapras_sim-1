@@ -15,6 +15,7 @@ terminal#2
 cd nav2robot_ws
 source /opt/ros/galactic/setup.bash
 ros2 topic list
+colcon build
 source install/local_setup.bash
 ros2 launch lapras_sim
 ros2 launch lapras_sim ydlidar.launch.py
