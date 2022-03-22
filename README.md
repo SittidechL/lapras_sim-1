@@ -23,11 +23,16 @@ ros2 launch lapras_sim ydlidar.launch.py
 terminal#3
 cd nav2robot_ws
 source /opt/ros/galactic/setup.bash
-ros2 topic list
+colcon build
 source install/local_setup.bash
-ros2 launch lapras_sim
-ros2 launch lapras_sim ydlidar.launch.py
+rviz2
 
+terminal#4
+cd nav2robot_ws
+source /opt/ros/galactic/setup.bash
+colcon build
+source install/local_setup.bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 
 
