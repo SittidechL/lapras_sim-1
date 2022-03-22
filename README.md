@@ -6,7 +6,7 @@ git clone https://github.com/phuwanat-vg/lapras_sim.git
 source /opt/ros/galactic/setup.bash
 cd ..
 colcon build
-sorce install/local_setup.bash
+source install/local_setup.bash
 export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:${GAZEBO_MODEL_PATH}:~/ros2robot_ws/src/lapras_sim/lapras_sim
 ros2 launch lapras_sim lapras_world.launch.py
 ```
