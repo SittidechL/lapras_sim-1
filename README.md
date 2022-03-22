@@ -7,7 +7,7 @@ source /opt/ros/galactic/setup.bash
 cd ..
 colcon build
 source install/local_setup.bash
-export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:${GAZEBO_MODEL_PATH}:~/ros2robot_ws/src/lapras_sim/lapras_sim
+export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:${GAZEBO_MODEL_PATH}:~/nav2robot_ws/src/lapras_sim/lapras_sim
 ros2 launch lapras_sim lapras_world.launch.py
 ```
 
