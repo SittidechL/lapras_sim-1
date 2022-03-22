@@ -1,6 +1,6 @@
 # lapras_sim-1
 ```
-mkdir ros2robot_ws && cd ros2robot_ws/
+mkdir nav2robot_ws && cd nav2robot_ws/
 mkdir src && cd src/
 git clone https://github.com/phuwanat-vg/lapras_sim.git
 source /opt/ros/galactic/setup.bash
