@@ -84,15 +84,19 @@ ros2 run nav2_map_server map_saver_cli -f gazebo_map
 ```
 navrobot_ws/
 map --> insert file .pgm/.yaml
-setup.py --> write add .pgm/.yaml
+setup.py --> write add map .pgm/.yaml
 
 open terminal
 source /opt/ros/galactic/setup.bash
 colcon build --packages-select navrobot
-
-
 ```
-
+```
+cd navrobot_ws/
+sudo apt install ros-galactic-navigation2 
+find 'https://github.com/ros-planning/navigation2'
+cp nav2_params.yaml /config
+setup.py --> write add config .pgm/.yaml
+```
 
 
 
