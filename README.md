@@ -45,7 +45,7 @@ rviz2
 ```
 ```
 new terminal **run cartographer**
-cd nav2robot_ws
+cd navrobot_ws
 source /opt/ros/galactic/setup.bash
 colcon build
 source install/local_setup.bash
