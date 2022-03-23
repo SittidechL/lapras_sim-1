@@ -103,9 +103,18 @@ source /opt/ros/galactic/setup.bash
 /launch touch nav2.launch.py
 colcon build --packages-select navrobot
 source install/local_setup.bash
+sudo apt install ros-galactic-navigation2
+sudo apt install ros-galactic-bringup
 ros2 launch navrobot robot_bringup.launch.py # if don't have robot not run
 ros2 launch navrobot nav2.launch.py
 2:10 
+2:34
+navrobot/touch robot_navigator.py   # copy from https://github.com/SteveMacenski/nav2_rosdevday_2021/blob/main/nav2_rosdevday_2021/scripts/robot_navigator.py
+navrobot/touch navigation.py
+colcon build
+ros2 run navrobot navigation
+
+
 ```
 
 
