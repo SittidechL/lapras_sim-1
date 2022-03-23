@@ -58,7 +58,34 @@ sudo apt install ros-galactic-nav2-map-server
 ros2 run nav2_map_server map_saver_cli -f gazebo_map
 ```
 
+# run robot actual at 33:20
+```
+terminal#1
+cd navrobot_ws
+source /opt/ros/galactic/setup.bash
+colcon build
+source install/local_setup.bash
+ros2 launch navrobot robot_bringup.launch.py
+rviz2
 
+terminal#2
+source /opt/ros/galactic/setup.bash
+ros2 launch navrobot cartographer.launch.py
+
+terminal#3 for scan map
+source /opt/ros/galactic/setup.bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+terminal#4 save map
+source /opt/ros/galactic/setup.bash
+ros2 run nav2_map_server map_saver_cli -f gazebo_map
+
+
+```
+```
+* run map
+
+```
 
 
 
