@@ -20,8 +20,6 @@ colcon build
 source install/local_setup.bash
 ros2 launch lapras_sim ydlidar.launch.py
 ```
-# `run cartographer`
-ros2 launch navrobot cartographer.launch.py
 ```
 terminal#3 **lapras_module**
 cd nav2robot_ws
@@ -38,8 +36,21 @@ colcon build
 source install/local_setup.bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
-
-
+```
+terminal#5 **rviz2**
+cd nav2robot_ws
+source /opt/ros/galactic/setup.bash
+source install/local_setup.bash
+rviz2
+```
+```
+new terminal **run cartographer**
+cd nav2robot_ws
+source /opt/ros/galactic/setup.bash
+colcon build
+source install/local_setup.bash
+ros2 launch navrobot cartographer.launch.py
+```
 
 
 
