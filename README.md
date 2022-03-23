@@ -36,6 +36,13 @@ source install/local_setup.bash
 rviz2
 ```
 ```
+terminal#5 **map_server**
+cd nav2robot_ws
+source /opt/ros/galactic/setup.bash
+sudo apt install ros-galactic-nav2-map-server
+ros2 run nav2_map_server map_saver_cli -f gazebo_map
+```
+```
 new terminal **run cartographer**
 cd navrobot_ws
 source /opt/ros/galactic/setup.bash
