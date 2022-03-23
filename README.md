@@ -10,7 +10,8 @@ colcon build
 source install/local_setup.bash
 export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:${GAZEBO_MODEL_PATH}:~/nav2robot_ws/src/lapras_sim/lapras_sim
 ros2 launch lapras_sim lapras_world.launch.py
-
+```
+```
 terminal#2 **run ydlidar**
 cd nav2robot_ws
 source /opt/ros/galactic/setup.bash
@@ -18,18 +19,19 @@ ros2 topic list
 colcon build
 source install/local_setup.bash
 ros2 launch lapras_sim ydlidar.launch.py
-
+```
 # `run cartographer`
 ros2 launch navrobot cartographer.launch.py
-
-terminal#3
+```
+terminal#3 **lapras_module**
 cd nav2robot_ws
 source /opt/ros/galactic/setup.bash
 colcon build
 source install/local_setup.bash
-rviz2
-
-terminal#4
+ros2 run lapras_sim_support lapras_module 
+```
+```
+terminal#4  **Key board**
 cd nav2robot_ws
 source /opt/ros/galactic/setup.bash
 colcon build
