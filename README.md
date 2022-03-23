@@ -105,6 +105,7 @@ colcon build --packages-select navrobot
 source install/local_setup.bash
 ros2 launch navrobot robot_bringup.launch.py # if don't have robot not run
 ros2 launch navrobot nav2.launch.py
+2:10 
 ```
 
 
