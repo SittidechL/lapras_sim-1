@@ -20,6 +20,9 @@ source install/local_setup.bash
 ros2 launch lapras_sim
 ros2 launch lapras_sim ydlidar.launch.py
 
+# run cartographer
+ros2 launch navrobot cartographer.launch.py
+
 terminal#3
 cd nav2robot_ws
 source /opt/ros/galactic/setup.bash
