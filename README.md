@@ -107,12 +107,16 @@ sudo apt install ros-galactic-navigation2
 sudo apt install ros-galactic-bringup
 ros2 launch navrobot robot_bringup.launch.py # if don't have robot not run
 ros2 launch navrobot nav2.launch.py
-2:10 
-2:34
+
 navrobot/touch robot_navigator.py   # copy from https://github.com/SteveMacenski/nav2_rosdevday_2021/blob/main/nav2_rosdevday_2021/scripts/robot_navigator.py
 navrobot/touch navigation.py
+terminal#2
+source /opt/ros/galactic/setup.bash
 colcon build
+source install/local_setup.bash
 ros2 run navrobot navigation
+
+# robot actual run
 
 
 ```
