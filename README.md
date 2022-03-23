@@ -96,6 +96,15 @@ sudo apt install ros-galactic-navigation2
 find 'https://github.com/ros-planning/navigation2'
 cp nav2_params.yaml /config
 setup.py --> write add config .pgm/.yaml
+colcon build --packages-select navrobot
+# search--> amcl turning guide research
+
+source /opt/ros/galactic/setup.bash
+/launch touch nav2.launch.py
+colcon build --packages-select navrobot
+source install/local_setup.bash
+ros2 launch navrobot robot_bringup.launch.py # if don't have robot not run
+ros2 launch navrobot nav2.launch.py
 ```
 
 
