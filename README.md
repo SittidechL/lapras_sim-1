@@ -1,5 +1,43 @@
 # lapras_sim-1
 ```
+* terminal#1tap#1 "Gazebo"
+cd nav2robot_ws
+source /opt/ros/galactic/setup.bash
+colcon build
+source install/local_setup.bash
+export GAZEBO_MODEL_PATH=/usr/share/gazebo-11/models:${GAZEBO_MODEL_PATH}:~/nav2robot_ws/src/lapras_sim/lapras_sim
+ros2 launch lapras_sim lapras_world.launch.py
+```
+```
+* terminal#1tap#2 "ydlidar"
+source /opt/ros/galactic/setup.bash
+source install/local_setup.bash
+ros2 launch lapras_sim ydlidar.launch.py
+```
+```
+* terminal#1tap#3 "lapras_module"
+source /opt/ros/galactic/setup.bash
+source install/local_setup.bash
+ros2 run lapras_sim_support lapras_module 
+```
+```
+* terminal#2tap#1
+cd navrobot_ws
+source /opt/ros/galactic/setup.bash
+colcon build
+source install/local_setup.bash
+ros2 launch navrobot robot_bringup.launch.py # if don't have robot not run
+ros2 launch navrobot nav2.launch.py
+```
+```
+* terminal#2tap#2
+source /opt/ros/galactic/setup.bash
+source install/local_setup.bash
+ros2 run navrobot navigation
+```
+
+### first setup
+```
 terminal#1 **run gazebo**
 mkdir nav2robot_ws && cd nav2robot_ws/
 mkdir src && cd src/
