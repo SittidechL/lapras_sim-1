@@ -21,7 +21,15 @@ source install/local_setup.bash
 ros2 run lapras_sim_support lapras_module 
 ```
 ```
-* terminal#2tap#1
+* terminal#2tap#1 "Keep out sole"
+cd navrobot_ws
+source /opt/ros/galactic/setup.bash
+colcon build
+source install/local_setup.bash
+ros2 launch navrobot add_keepout_filter.launch.py
+```
+```
+* terminal#2tap#2
 cd navrobot_ws
 source /opt/ros/galactic/setup.bash
 colcon build
@@ -30,7 +38,19 @@ ros2 launch navrobot robot_bringup.launch.py # if don't have robot not run
 ros2 launch navrobot nav2.launch.py
 ```
 ```
-* terminal#2tap#2
+* terminal#3tap#4 "Robot localization pakg EKF"
+sudo apt install ros-galactic-diagnostic-updater
+sudo apt install ros-galactic-geographic-msgs
+sudo apt install geographiclib-tools
+sudo apt install ros-galactic-robot-localization
+
+ros2 interface show sensor_msgs/msg/Imu
+1:26:30
+
+```
+
+```
+* terminal#2tap#3
 source /opt/ros/galactic/setup.bash
 source install/local_setup.bash
 ros2 run navrobot navigation
