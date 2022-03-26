@@ -38,23 +38,26 @@ ros2 launch navrobot robot_bringup.launch.py # if don't have robot not run
 ros2 launch navrobot nav2.launch.py
 ```
 ```
+* terminal#2tap#3
+source /opt/ros/galactic/setup.bash
+source install/local_setup.bash
+ros2 run navrobot navigation
+```
+```
 * terminal#3tap#4 "Robot localization pakg EKF"
 sudo apt install ros-galactic-diagnostic-updater
 sudo apt install ros-galactic-geographic-msgs
 sudo apt install geographiclib-tools
 sudo apt install ros-galactic-robot-localization
 
-ros2 interface show sensor_msgs/msg/Imu
-1:26:30
-
-```
-
-```
-* terminal#2tap#3
 source /opt/ros/galactic/setup.bash
 source install/local_setup.bash
-ros2 run navrobot navigation
+ros2 interface show sensor_msgs/msg/Imu
+
+ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyACM0
 ```
+
+
 
 ### first setup
 ```
